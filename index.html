@@ -1,0 +1,23 @@
+---
+
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+<!-- THIS FILE DEALS PRIMARILY WITH CONTENT WHEREAS OUR LAYOUT IS DEALT WITH IN THE LAYOUTS FOLDER -->
+
+<h1>{{site.title}}</h1>
+
+
+<!-- here we set up a loop that runs through all of our posts and grabs some specified varaibles -->
+<div class="blog-posts">
+    {% for post in site.posts%}
+        <a href="{{post.url}}">
+            <h2>{{post.title}}</h2>
+            <p> {{post.excerpt}}</p>
+            <p>Read More</p>
+        </a>
+    {% endfor %}
+
+</div>
